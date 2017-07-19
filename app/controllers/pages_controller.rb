@@ -22,6 +22,13 @@ class PagesController < ApplicationController
     redirect_to "/welcome"
   end
 
-  
+  def secrets
+    magic_word = 'shhh'
+    if params[:magic_word] == magic_word
+        render 'secrets'
+    else
+      flash[:alert] = "Sorry, you're not authorized to see that page!"
+    end
+  end
 
 end
