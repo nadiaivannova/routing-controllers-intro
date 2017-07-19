@@ -8,4 +8,6 @@ get '/all_about_me' => 'pages#about'
 
 get '/good_luck' => 'pages#contest'
 
+get '/kitten/:size' => 'pages#kitten'
+
 end
